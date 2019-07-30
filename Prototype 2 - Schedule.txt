@@ -1,0 +1,53 @@
+Saatwik - Artist
+
+Background - 30/07/19
+Link, chuchu, rupees, grass, chest (powerup) - 01/08/19
+(four directions + sword swing) - 02/08/19
+ANALYSIS
+
+
+Mamello - UI Artist
+
+Lives - 01/08/19
+score - 01/08/19
+start screen - 01/08/19
+controls splash screen - 01/08/19
+start/quit buttons + sprites - 01/08/19
+do you want to quit - 01/08/19
+game over text - 01/08/19
+ANALYSIS
+
+
+Ryan - Programmer
+
+Movement - 02/08/19
+AI (including chasing scared enemies) - 02/08/19
+Collection - 02/08/19
+Death - 02/08/19
+Win - 02/08/19
+Respawn - 02/08/19
+Score - 02/08/19
+Escape (are you sure you want to quit?) - 02/08/19
+ANALYSIs
+
+A* algorithm - 02/08/19
+
+
+Benjamin - Designer/Filler/SFX
+
+(THESE ARE ALL ZELDA THEMED)
+Coin collection - 31/07/19
+chest opening - 31/07/19
+death - 31/07/19
+grass chop (with a sword) - 31/07/19
+win - 31/07/19
+ANALYSIS
+
+
+Brian - PM/VFX
+
+trail
+fish bowl effect
+grain
+GDD
+ANALYSIS
