@@ -258,8 +258,6 @@ public class Movement : MonoBehaviour
        
 
         if (tile != null) {
-
-            Debug.Log(tile + " " + tile.transform.position);
             return tile;
         }
 
