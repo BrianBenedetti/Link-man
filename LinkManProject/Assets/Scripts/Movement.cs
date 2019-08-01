@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour
 
         inputDirection = Vector2.left;
         changeDirection(inputDirection);
+
      
     }
 
@@ -37,14 +38,16 @@ public class Movement : MonoBehaviour
 
         move();
 
+
+        collectGrass();
     }
 
     void setDirection()
         {
 
-            if (Input.GetKeyDown(KeyCode.UpArrow)) {
 
-                
+
+            if (Input.GetKeyDown(KeyCode.UpArrow)) {
 
                 transform.localScale = new Vector3(1,1,1);
                 transform.localRotation = Quaternion.Euler(0,0,90);
@@ -145,6 +148,17 @@ public class Movement : MonoBehaviour
         if(endPointNode != currentNode && endPointNode != null)
         {
 
+            if (nextDirection == inputDirection * -1) {
+
+                inputDirection *= -1;
+
+                Node tempNode = endPointNode;
+
+                endPointNode = previousNode;
+
+                previousNode = tempNode;
+            }
+
             if (overShotDestination())
             {
 
@@ -207,6 +221,50 @@ public class Movement : MonoBehaviour
         Debug.Log("no tile");
 
         return null;
+    }
+
+    void collectGrass() {
+
+        GameObject o = getTilePosition(transform.position);
+
+
+        if (o != null) {
+
+            Tile tile = o.GetComponent<Tile>();
+
+            if (tile != null) {
+
+                if (!tile.collected && tile.isGrass) {
+
+                    o.GetComponent<SpriteRenderer>().enabled = false;
+                    tile.collected = true;
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+    GameObject getTilePosition(Vector2 pos) {
+
+        int tileX = Mathf.RoundToInt(pos.x);
+        int tileY = Mathf.RoundToInt(pos.y);
+
+        GameObject tile = GameObject.Find("GameBoard").GetComponent<Board>().board[tileX,tileY];
+
+       
+
+        if (tile != null) {
+
+            Debug.Log(tile + " " + tile.transform.position);
+            return tile;
+        }
+
+        return null;
+
     }
 
     float distanceToNode(Vector2 targetNode) {
