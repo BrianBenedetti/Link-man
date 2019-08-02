@@ -207,17 +207,16 @@ public class Ghost : MonoBehaviour
 
     public Node getNodeAtPosition(Vector2 pos)
     {
+        print("Position:"+pos);
 
         GameObject tile = GameObject.Find("GameBoard").GetComponent<Board>().board[(int)pos.x, (int)pos.y];
 
-        //Node tileNode = 
-
-        print("Node at Position "+ pos+":" +tile);
+        print("Tile:" +tile);
 
         if (tile != null)
         {
-            print(tile.GetComponent<Node>());
             return tile.GetComponent<Node>();
+            print("Tile Found" + tile.GetComponent<Node>());
         }
         print("no tile");
         return null;
