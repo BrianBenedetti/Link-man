@@ -8,6 +8,11 @@ public class Ghost : MonoBehaviour
 
     public Node startPos;
 
+    public float chuchuReleaseTimer = 0;
+    public int chuchu1ReleaseTimer = 3;
+
+    public bool isInGhostHouse = false;
+
     public int scatterModeTimer1 = 7;
     public int chaseModeTimer1 = 20;
     public int scatterModeTimer2 = 7;
@@ -23,6 +28,13 @@ public class Ghost : MonoBehaviour
         Chase,
         Scatter
     }
+
+    public enum ChuchuType {
+        Chuchu1,
+        Chuchu2
+    }
+
+    public ChuchuType chuchuType = ChuchuType.Chuchu1;
 
     Mode currentMode = Mode.Scatter;
     Mode prevMode;
