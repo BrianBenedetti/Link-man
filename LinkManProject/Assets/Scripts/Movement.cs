@@ -18,11 +18,13 @@ public class Movement : MonoBehaviour
     {
         Node node = getNodePosition(transform.localPosition);
 
+        Debug.Log("before assignment "+node);
+
         if (node != null) {
 
             currentNode = node;
 
-            Debug.Log(currentNode);
+            Debug.Log("current node" + currentNode);
         }
 
         inputDirection = Vector2.left;
@@ -210,9 +212,12 @@ public class Movement : MonoBehaviour
 
         GameObject tile = GameObject.Find("GameBoard").GetComponent<Board>().board [(int) position.x,(int) position.y];
 
+        Debug.Log(tile);
+
         if (tile != null) {
 
-           
+            Debug.Log("returning");
+               
 
             return tile.GetComponent<Node>();
 

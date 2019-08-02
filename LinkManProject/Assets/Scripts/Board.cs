@@ -18,7 +18,7 @@ public class Board : MonoBehaviour
 
                 Vector2 pos = o.transform.position;
 
-            if (o.name != "LinkPlaceHolder")
+            if (o.name != "LinkPlaceHolder" && o.name != "NodeHolder" && o.name!= "GrassHolder" && o.name!="WallHolder" && o.name!="InteractableObjects")
             {
 
                 board[(int)pos.x, (int)pos.y] = o;
