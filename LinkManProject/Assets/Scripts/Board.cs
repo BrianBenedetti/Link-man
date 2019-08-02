@@ -27,7 +27,7 @@ public class Board : MonoBehaviour
 
             else {
 
-                Debug.Log("Found Player" + pos);
+                //Debug.Log("Found Player" + pos);
             }
 
         }
