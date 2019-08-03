@@ -12,6 +12,15 @@ public class GM : MonoBehaviour
     public TextMesh scoreText;
     public TextMesh healthText;
     public bool paused = false;
+    public GameObject startBoard;
+    public GameObject infoBoard;
+    public GameObject controlsBoard;
+    public GameObject healthLossParticles;
+    public GameObject healthGainParticles;
+    public GameObject gemParticles;
+    public GameObject greenHealthIcon;
+    public GameObject yellowHealthIcon;
+    public GameObject redHealthIcon;
     public GameObject pausedText;
     public GameObject WinText;
     public GameObject gameOverText;
@@ -20,7 +29,11 @@ public class GM : MonoBehaviour
     public GameObject cursor;
     public Transform yesText;
     public Transform noText;
+    public GameObject standInPlayer;
     public static GM instance = null;
+
+    //private variables
+    private Animator animator;
 
 
     void Awake()
@@ -34,12 +47,15 @@ public class GM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = scoreText.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        StartGame();
+        PauseGame();
+
         if (Input.GetKeyDown(KeyCode.Z)) //stand in UI interactions
         {
             HealthLoss();
@@ -55,7 +71,17 @@ public class GM : MonoBehaviour
             ScoreGain();
         }
 
-        PauseGame();
+        if (Input.GetKeyDown(KeyCode.V))//stand in UI interactions
+        {
+            GemPoints();
+        }
+        else 
+        {
+            if (infoBoard.activeInHierarchy == true)
+            {
+                animator.SetBool("Got Gem", false);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -72,18 +98,47 @@ public class GM : MonoBehaviour
         {
             QuitChoice();
         }
+    }
 
+    void StartGame ()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            startBoard.SetActive(false);
+            controlsBoard.SetActive(true);
+            Invoke("HideControlsBoard", 4f);
+        }
+    }
+
+    void HideControlsBoard()
+    {
+        controlsBoard.SetActive(false);
+        infoBoard.SetActive(true);
+        standInPlayer.SetActive(true);
     }
 
     public void HealthLoss()
     {
         health--;
         healthText.text = " " + health;
-        
+        Instantiate(healthLossParticles, standInPlayer.transform.position, Quaternion.identity); 
+
+        if (health == 2)
+        {
+            greenHealthIcon.SetActive(false);
+        }
+
+        if (health == 1)
+        {
+            yellowHealthIcon.SetActive(false);
+        }
+
         //losing
         if (health == 0)
         {
+            redHealthIcon.SetActive(false);
             gameOverText.SetActive(true);
+            Invoke("ReloadGame", 2f);
         }
     }
 
@@ -91,6 +146,17 @@ public class GM : MonoBehaviour
     {
         health++;
         healthText.text = " " + health;
+        Instantiate(healthGainParticles, standInPlayer.transform.position, Quaternion.identity); 
+
+        if (health == 3)
+        {
+            greenHealthIcon.SetActive(true);
+        }
+
+        if (health == 2)
+        {
+            yellowHealthIcon.SetActive(true);
+        }
     }
 
     public void ScoreGain ()
@@ -103,6 +169,14 @@ public class GM : MonoBehaviour
         {
             WinText.SetActive(true);
         }
+    }
+
+    public void GemPoints ()
+    {
+        score = score * 2; 
+        animator.SetBool("Got Gem", true);
+        Instantiate(gemParticles, standInPlayer.transform.position, Quaternion.identity);
+        Instantiate(gemParticles, scoreText.transform.position, Quaternion.identity);
     }
 
     void PauseGame()
@@ -126,14 +200,14 @@ public class GM : MonoBehaviour
         }
     }
 
-    void ActivateQuitMenu ()
-    {
-        quitMenu.SetActive(true);
-    }
-
     void ReloadGame ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+    }
+
+    void ActivateQuitMenu()
+    {
+        quitMenu.SetActive(true);
     }
 
     void QuitChoice ()
