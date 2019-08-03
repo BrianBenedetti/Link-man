@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    
 
     public Vector2 orientation;
 
@@ -15,12 +16,16 @@ public class Movement : MonoBehaviour
 
     private Node currentNode,previousNode, endPointNode;
 
+    private Node startPos;
+
     // Start is called before the first frame update
     void Start()
     {
         Node node = getNodePosition(transform.localPosition);
 
         Debug.Log("before assignment "+node);
+
+        startPos = node;
 
         if (node != null) {
 
@@ -37,6 +42,19 @@ public class Movement : MonoBehaviour
         changeDirection(inputDirection);
 
      
+    }
+
+    public void Restart() {
+        /*transform.position = startPos.transform.position;
+        currentNode = startPos;
+
+        inputDirection = Vector2.left;
+        orientation = Vector2.left;
+        nextDirection = Vector2.left;
+
+        changeDirection(inputDirection);*/
+
+        print("____PROMPT TO RESTART SCENE/ENDGAME/LOSELIFE__");
     }
 
     // Update is called once per frame

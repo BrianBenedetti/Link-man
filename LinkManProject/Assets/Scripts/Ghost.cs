@@ -72,12 +72,30 @@ public class Ghost : MonoBehaviour
         //print("TargetNode:" + targetNode);
     }
 
+    public void Restart()
+    {
+        transform.position = startPos.transform.position;
+        modeChangeIterations = 1;
+        modeChangeTimer = 0;
+
+
+        currentNode = startPos;
+        direction = Vector2.right;
+        targetNode = chooseNextNode();
+
+
+        PreviousNode = currentNode;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
         ModeUpdate();
 
         Move();
+
+        CheckCollision();
     }
 
     public void Move()
@@ -257,6 +275,21 @@ public class Ghost : MonoBehaviour
         return moveToNode;
     }
 
+    void CheckCollision() {
+        //Rect chuchuRect = new Rect(transform.position, transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
+        //Rect linkRect = new Rect(link.transform.position, link.transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
+
+
+        Rect chuchuRect = new Rect(transform.position, transform.GetComponent<MeshRenderer>().bounds.size / 4);
+        Rect linkRect = new Rect(link.transform.position, link.transform.GetComponent<MeshRenderer>().bounds.size / 4);
+
+        if (chuchuRect.Overlaps(linkRect))
+        {
+            GameObject.Find("GameBoard").transform.GetComponent<Board>().Restart();
+
+        }
+    }
+
 
     public Node getNodeAtPosition(Vector2 pos)
     {
@@ -269,7 +302,6 @@ public class Ghost : MonoBehaviour
         if (tile != null)
         {
             return tile.GetComponent<Node>();
-            print("Tile Found" + tile.GetComponent<Node>());
         }
         print("no tile");
         return null;

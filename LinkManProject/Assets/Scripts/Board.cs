@@ -8,6 +8,8 @@ public class Board : MonoBehaviour
     private static int width = 28;
     private static int height = 36;
 
+    public int lives = 3;
+
     public GameObject[,] board = new GameObject[width,height];
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,21 @@ public class Board : MonoBehaviour
                 Debug.Log("Found Player" + pos);
             }
 
+        }
+    }
+
+    public void Restart() {
+        lives--;
+
+        GameObject link = GameObject.FindGameObjectWithTag("Link");
+
+        link.GetComponent<Movement>().Restart();
+
+        GameObject[] o = GameObject.FindGameObjectsWithTag("Chuchu");
+
+        foreach (GameObject chuchu in o)
+        {
+            chuchu.transform.GetComponent<Ghost>().Restart();
         }
     }
 
