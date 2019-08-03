@@ -8,6 +8,11 @@ public class Ghost : MonoBehaviour
 
     public Node startPos;
 
+    public float chuchuReleaseTimer = 0;
+    public int chuchu1ReleaseTimer = 3;
+
+    public bool isInGhostHouse = false;
+
     public int scatterModeTimer1 = 7;
     public int chaseModeTimer1 = 20;
     public int scatterModeTimer2 = 7;
@@ -23,6 +28,13 @@ public class Ghost : MonoBehaviour
         Chase,
         Scatter
     }
+
+    public enum ChuchuType {
+        Chuchu1,
+        Chuchu2
+    }
+
+    public ChuchuType chuchuType = ChuchuType.Chuchu1;
 
     Mode currentMode = Mode.Scatter;
     Mode prevMode;
@@ -42,23 +54,37 @@ public class Ghost : MonoBehaviour
         link = GameObject.FindGameObjectWithTag("Link");
 
         Node node = startPos;
+<<<<<<< HEAD
 
         print("____________Saatwik DEBUG___________");
         print("StartNode: " + node);
+=======
+>>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
 
         if (node != null) {
             currentNode = node;
         }
 
         direction = Vector2.right;
+<<<<<<< HEAD
+
+        PreviousNode = currentNode;
+=======
+        targetNode = chooseNextNode();
+>>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
+
 
         PreviousNode = currentNode;
 
-        Vector2 linkPos = link.transform.position;
-
-        Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
-
+<<<<<<< HEAD
         targetNode = getNodeAtPosition(targetTile);
+=======
+        //Vector2 linkPos = link.transform.position;
+        //Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+        //targetNode = getNodeAtPosition(targetTile);
+
+        //print("TargetNode:" + targetNode);
+>>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
     }
 
     // Update is called once per frame
@@ -84,11 +110,23 @@ public class Ghost : MonoBehaviour
 
                 targetNode = chooseNextNode();
 
+<<<<<<< HEAD
                 PreviousNode = currentNode;
 
                 currentNode = null;
             }
 
+=======
+
+
+                targetNode = chooseNextNode();
+
+                PreviousNode = currentNode;
+
+                currentNode = null;
+            }
+
+>>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
             else
             {
                 transform.position += (Vector3)direction * mSpeed * Time.deltaTime;
@@ -157,11 +195,48 @@ public class Ghost : MonoBehaviour
         currentMode = m;
     }
 
+    Vector2 getChuchu1GhostTargetTile() {
+        Vector2 linkPos = link.transform.position;
+        Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+
+        return targetTile;
+    }
+
+    Vector2 getChuchu2GhostTargetTile()
+    {
+        Vector2 linkPos = link.transform.position;
+        Vector2 linkOrient = link.GetComponent<Movement>().orientation;
+
+        int linkPosX = Mathf.RoundToInt(linkPos.x);
+        int linkPosY = Mathf.RoundToInt(linkPos.y);
+
+        Vector2 linkTile = new Vector2(linkPosX, linkPosY);
+        Vector2 targetTile = linkTile + (3 * linkOrient);
+
+        return targetTile;
+    }
+
+    Vector2 getTargetTile()
+    {
+        Vector2 targetTile = Vector2.zero;
+
+        if (chuchuType == ChuchuType.Chuchu1)
+        {
+            targetTile = getChuchu1GhostTargetTile();
+        }
+        else if (chuchuType == ChuchuType.Chuchu2)
+        {
+            targetTile = getChuchu2GhostTargetTile();
+        }
+
+        return targetTile;
+    }
+
+
     public Node chooseNextNode() {
         Vector2 targetTile = Vector2.zero;
 
-        Vector2 linkPos = link.transform.position;
-        targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+        targetTile = getTargetTile();
 
         Node moveToNode = null;
 
@@ -191,8 +266,11 @@ public class Ghost : MonoBehaviour
             float leastDistance = 1000000f;
             for (int i = 0; i < foundNodes.Length; i++)
             {
+<<<<<<< HEAD
                 
 
+=======
+>>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
                 if (foundNodesDirection[i] != Vector2.zero)
                 {
                     float distance = shortestRoute(foundNodes[i].transform.position, targetTile);

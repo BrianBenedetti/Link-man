@@ -5,6 +5,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 
+    public Vector2 orientation;
+
     public float moveSpeed;
 
     Vector2 inputDirection = Vector2.zero;
@@ -28,6 +30,10 @@ public class Movement : MonoBehaviour
         }
 
         inputDirection = Vector2.left;
+        orientation = Vector2.left;
+
+
+
         changeDirection(inputDirection);
 
      
@@ -40,6 +46,7 @@ public class Movement : MonoBehaviour
 
         move();
 
+        UpdateOrientation(); 
 
         collectGrass();
     }
@@ -207,6 +214,33 @@ public class Movement : MonoBehaviour
        
 
         }
+
+    void UpdateOrientation() {
+        if (inputDirection == Vector2.left)
+        {
+            orientation = Vector2.left;
+            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (inputDirection == Vector2.right)
+        {
+            orientation = Vector2.right;
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (inputDirection == Vector2.up)
+        {
+            orientation = Vector2.up;
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.localRotation = Quaternion.Euler(0, 0, 90);
+        }
+        else if (inputDirection == Vector2.down)
+        {
+            orientation = Vector2.down;
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.localRotation = Quaternion.Euler(0, 0, 270);
+        }
+    }
 
     Node getNodePosition(Vector2 position) {
 
