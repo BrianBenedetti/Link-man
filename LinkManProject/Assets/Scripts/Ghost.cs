@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    public float mSpeed = 1f;
+    public float mSpeed = 3.9f;
 
     public Node startPos;
 
@@ -54,37 +54,22 @@ public class Ghost : MonoBehaviour
         link = GameObject.FindGameObjectWithTag("Link");
 
         Node node = startPos;
-<<<<<<< HEAD
-
-        print("____________Saatwik DEBUG___________");
-        print("StartNode: " + node);
-=======
->>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
 
         if (node != null) {
             currentNode = node;
         }
 
         direction = Vector2.right;
-<<<<<<< HEAD
-
-        PreviousNode = currentNode;
-=======
         targetNode = chooseNextNode();
->>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
 
 
         PreviousNode = currentNode;
 
-<<<<<<< HEAD
-        targetNode = getNodeAtPosition(targetTile);
-=======
         //Vector2 linkPos = link.transform.position;
         //Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
         //targetNode = getNodeAtPosition(targetTile);
 
         //print("TargetNode:" + targetNode);
->>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
     }
 
     // Update is called once per frame
@@ -97,26 +82,16 @@ public class Ghost : MonoBehaviour
 
     public void Move()
     {
-        print("Target Node: "+targetNode);
 
         if (targetNode != currentNode && targetNode != null)
         {
             if (OverShotTarget())
             {
-
                 currentNode = targetNode;
 
                 transform.localPosition = currentNode.transform.position;
 
-                targetNode = chooseNextNode();
 
-<<<<<<< HEAD
-                PreviousNode = currentNode;
-
-                currentNode = null;
-            }
-
-=======
 
 
                 targetNode = chooseNextNode();
@@ -126,7 +101,6 @@ public class Ghost : MonoBehaviour
                 currentNode = null;
             }
 
->>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
             else
             {
                 transform.position += (Vector3)direction * mSpeed * Time.deltaTime;
@@ -266,11 +240,6 @@ public class Ghost : MonoBehaviour
             float leastDistance = 1000000f;
             for (int i = 0; i < foundNodes.Length; i++)
             {
-<<<<<<< HEAD
-                
-
-=======
->>>>>>> f7bc51927d524aba3247eec976a84975e42eefb0
                 if (foundNodesDirection[i] != Vector2.zero)
                 {
                     float distance = shortestRoute(foundNodes[i].transform.position, targetTile);
@@ -295,23 +264,12 @@ public class Ghost : MonoBehaviour
 
         GameObject tile = GameObject.Find("GameBoard").GetComponent<Board>().board[(int)pos.x, (int)pos.y];
 
-<<<<<<< HEAD
         print("Tile:" +tile);
 
         if (tile != null)
         {
             return tile.GetComponent<Node>();
             print("Tile Found" + tile.GetComponent<Node>());
-=======
-
-        print("Node at Position "+ pos+":" +tile);
-
-        if (tile != null)
-        {
-            print("Tile Name: " + tile.name);
-            print("Node Components: " + tile.GetComponent<Node>().destinations);
-            return tile.gameObject.GetComponent<Node>();
->>>>>>> 9c82f3cf5bf0d68daea67d1c0cdcc979d0f95000
         }
         print("no tile");
         return null;
