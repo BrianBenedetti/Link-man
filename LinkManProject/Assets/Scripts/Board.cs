@@ -18,7 +18,7 @@ public class Board : MonoBehaviour
 
                 Vector2 pos = o.transform.position;
 
-            if (o.name != "LinkPlaceHolder" && o.name != "NodeHolder" && o.name!= "GrassHolder" && o.name!="WallHolder" && o.name!="InteractableObjects")
+            if (o.name != "LinkPlaceHolder" && o.name != "NodeHolder" && o.name!= "GrassHolder" && o.name!="WallHolder" && o.name!="InteractableObjects" && o.tag != "Chuchu")
             {
 
                 board[(int)pos.x, (int)pos.y] = o;
@@ -27,7 +27,7 @@ public class Board : MonoBehaviour
 
             else {
 
-                //Debug.Log("Found Player" + pos);
+                Debug.Log("Found Player" + pos);
             }
 
         }

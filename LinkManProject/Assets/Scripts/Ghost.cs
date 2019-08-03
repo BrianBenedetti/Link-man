@@ -60,16 +60,16 @@ public class Ghost : MonoBehaviour
         }
 
         direction = Vector2.right;
+        targetNode = chooseNextNode();
+
 
         PreviousNode = currentNode;
 
-        Vector2 linkPos = link.transform.position;
+        //Vector2 linkPos = link.transform.position;
+        //Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+        //targetNode = getNodeAtPosition(targetTile);
 
-        Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
-
-        targetNode = getNodeAtPosition(targetTile);
-
-        print("TargetNode:" + targetNode);
+        //print("TargetNode:" + targetNode);
     }
 
     // Update is called once per frame
@@ -169,11 +169,48 @@ public class Ghost : MonoBehaviour
         currentMode = m;
     }
 
+    Vector2 getChuchu1GhostTargetTile() {
+        Vector2 linkPos = link.transform.position;
+        Vector2 targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+
+        return targetTile;
+    }
+
+    Vector2 getChuchu2GhostTargetTile()
+    {
+        Vector2 linkPos = link.transform.position;
+        Vector2 linkOrient = link.GetComponent<Movement>().orientation;
+
+        int linkPosX = Mathf.RoundToInt(linkPos.x);
+        int linkPosY = Mathf.RoundToInt(linkPos.y);
+
+        Vector2 linkTile = new Vector2(linkPosX, linkPosY);
+        Vector2 targetTile = linkTile + (3 * linkOrient);
+
+        return targetTile;
+    }
+
+    Vector2 getTargetTile()
+    {
+        Vector2 targetTile = Vector2.zero;
+
+        if (chuchuType == ChuchuType.Chuchu1)
+        {
+            targetTile = getChuchu1GhostTargetTile();
+        }
+        else if (chuchuType == ChuchuType.Chuchu2)
+        {
+            targetTile = getChuchu2GhostTargetTile();
+        }
+
+        return targetTile;
+    }
+
+
     public Node chooseNextNode() {
         Vector2 targetTile = Vector2.zero;
 
-        Vector2 linkPos = link.transform.position;
-        targetTile = new Vector2(Mathf.RoundToInt(linkPos.x), Mathf.RoundToInt(linkPos.y));
+        targetTile = getTargetTile();
 
         Node moveToNode = null;
 
