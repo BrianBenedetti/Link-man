@@ -53,11 +53,13 @@ public class Ghost : MonoBehaviour
     {
         link = GameObject.FindGameObjectWithTag("Link");
 
-        Node node = getNodeAtPosition(transform.localPosition);
+        Node node = startPos;
 
         if (node != null) {
             currentNode = node;
         }
+
+        direction = Vector2.right;
 
         PreviousNode = currentNode;
 
@@ -90,16 +92,19 @@ public class Ghost : MonoBehaviour
                 transform.localPosition = currentNode.transform.position;
 
 
+
+
+                targetNode = chooseNextNode();
+
+                PreviousNode = currentNode;
+
+                currentNode = null;
             }
 
-            targetNode = chooseNextNode();
-
-            PreviousNode = currentNode;
-
-            currentNode = null;
-        }
-        else {
-            transform.position += (Vector3)direction * mSpeed * Time.deltaTime;
+            else
+            {
+                transform.position += (Vector3)direction * mSpeed * Time.deltaTime;
+            }
         }
     }
 
@@ -195,10 +200,9 @@ public class Ghost : MonoBehaviour
 
         if (foundNodes.Length > 1)
         {
+            float leastDistance = 1000000f;
             for (int i = 0; i < foundNodes.Length; i++)
             {
-                float leastDistance = 1000000f;
-
                 if (foundNodesDirection[i] != Vector2.zero)
                 {
                     float distance = shortestRoute(foundNodes[i].transform.position, targetTile);
