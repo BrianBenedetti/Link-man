@@ -276,12 +276,8 @@ public class Ghost : MonoBehaviour
     }
 
     void CheckCollision() {
-        //Rect chuchuRect = new Rect(transform.position, transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
-        //Rect linkRect = new Rect(link.transform.position, link.transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
-
-
-        Rect chuchuRect = new Rect(transform.position, transform.GetComponent<MeshRenderer>().bounds.size / 4);
-        Rect linkRect = new Rect(link.transform.position, link.transform.GetComponent<MeshRenderer>().bounds.size / 4);
+        Rect chuchuRect = new Rect(transform.position, transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
+        Rect linkRect = new Rect(link.transform.position, link.transform.GetComponent<SpriteRenderer>().sprite.bounds.size / 4);
 
         if (chuchuRect.Overlaps(linkRect))
         {
