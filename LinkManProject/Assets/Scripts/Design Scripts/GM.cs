@@ -102,7 +102,7 @@ public class GM : MonoBehaviour
 
     void StartGame ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && quitMenu.activeInHierarchy == false)
         {
             startBoard.SetActive(false);
             controlsBoard.SetActive(true);
@@ -173,7 +173,8 @@ public class GM : MonoBehaviour
 
     public void GemPoints ()
     {
-        score = score * 2; 
+        score = score + 2;
+        scoreText.text = " " + score;
         animator.SetBool("Got Gem", true);
         Instantiate(gemParticles, standInPlayer.transform.position, Quaternion.identity);
         Instantiate(gemParticles, scoreText.transform.position, Quaternion.identity);
@@ -231,7 +232,7 @@ public class GM : MonoBehaviour
         }
 
         //confirming quiting
-        if (cursor.transform.position == yesText.transform.position && Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (cursor.transform.position == yesText.transform.position && Input.GetKeyDown(KeyCode.Space))
         {
             Application.Quit();
             print("quit");
