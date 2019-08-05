@@ -11,6 +11,11 @@ public class Board : MonoBehaviour
 
     Object[] grass;
 
+    AudioSource[] sounds;
+
+    AudioSource deathSound;
+    AudioSource winSound;
+
     int uncollectedGrass;
 
     public int lives = 3;
@@ -19,6 +24,12 @@ public class Board : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sounds = GetComponents<AudioSource>();
+
+        deathSound = sounds[0];
+        winSound = sounds[1];
+
+
         link = GameObject.FindGameObjectWithTag("Link");
 
         grass = GameObject.FindObjectsOfType(typeof(Tile));
@@ -64,6 +75,7 @@ public class Board : MonoBehaviour
         if (uncollectedGrass == 0)
         {
             print("GAME ENDED; PLAYER WINS!!");
+
         }
 
     }
@@ -72,6 +84,8 @@ public class Board : MonoBehaviour
     {
         link.GetComponent<Movement>().Death();
         Destroy(link.GetComponent<Movement>());
+
+        deathSound.Play(0); 
 
         StartCoroutine(death());
     }
