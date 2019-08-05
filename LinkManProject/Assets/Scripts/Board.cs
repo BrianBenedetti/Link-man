@@ -73,8 +73,17 @@ public class Board : MonoBehaviour
             if (!(o.collected))
             {
                 uncollectedGrass++;
+
             }
-            else {
+
+            else if (o.isRupee == true) {
+
+                scoreCounter = scoreCounter + 6;
+
+            }
+
+            else
+            {
                 scoreCounter++;
             }
         }

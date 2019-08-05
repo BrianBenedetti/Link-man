@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &132678710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &159780507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1751,6 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &161084240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2199,6 +2202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &206818166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2481,6 +2485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &218155047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2608,6 +2613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &226964817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2740,6 +2746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &233885306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2867,6 +2874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &239466222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3104,6 +3112,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!114 &247598725 stripped
@@ -3144,6 +3158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &255746166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3431,6 +3446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &268090300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3563,6 +3579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &269552821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3690,6 +3707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &290250168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3822,6 +3840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &298965258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &331801908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4277,6 +4297,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!4 &331801909 stripped
@@ -4317,6 +4343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1 &335573244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5021,6 +5048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &432546184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,6 +5342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &452055349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5596,6 +5625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &465395799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5688,6 +5718,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!4 &465395800 stripped
@@ -5728,6 +5764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &469887148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5855,6 +5892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &490503327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,6 +6204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &509571626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6368,6 +6407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &519667255
 GameObject:
   m_ObjectHideFlags: 0
@@ -7062,6 +7102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &564007864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7435,6 +7476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &590971105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7792,6 +7834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &651940631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8181,6 +8224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &694696215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8434,6 +8478,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!114 &705104852 stripped
@@ -8474,6 +8524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &709021953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8751,6 +8802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &729872883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8883,6 +8935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &730919561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9583,6 +9636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &781982014
 GameObject:
   m_ObjectHideFlags: 0
@@ -10603,6 +10657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &872605182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10690,6 +10745,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!114 &872605183 stripped
@@ -10730,6 +10791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &874161904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10857,6 +10919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &890010475
 GameObject:
   m_ObjectHideFlags: 0
@@ -11597,6 +11660,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!4 &984909204 stripped
@@ -11637,6 +11706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &986726172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12069,6 +12139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1040262199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12231,6 +12302,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!114 &1049497209 stripped
@@ -12271,6 +12348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1001 &1058254913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12398,6 +12476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &1061161280
 GameObject:
   m_ObjectHideFlags: 0
@@ -12969,6 +13048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1095858137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13171,6 +13251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1099353427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13453,6 +13534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &1118355165
 GameObject:
   m_ObjectHideFlags: 0
@@ -14119,6 +14201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1175119094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14657,6 +14740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1245924303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14789,6 +14873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1254458683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14916,6 +15001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1265418325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15043,6 +15129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1268905066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15255,6 +15342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &1279599005
 GameObject:
   m_ObjectHideFlags: 0
@@ -15473,6 +15561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1286854434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15680,6 +15769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1307838864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16042,6 +16132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &1344631447
 GameObject:
   m_ObjectHideFlags: 0
@@ -16265,6 +16356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1360499987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16397,6 +16489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1373706323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16995,6 +17088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1414732718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17132,6 +17226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1422648890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17264,6 +17359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1423425264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17391,6 +17487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1464179999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17868,6 +17965,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5529649217734427455, guid: 000f2972e330aac4ebc7cdb2f8e0f868,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 26737b0494ffb714d86e53525667469f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000f2972e330aac4ebc7cdb2f8e0f868, type: 3}
 --- !u!114 &1542394225 stripped
@@ -17908,6 +18011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 1
 --- !u!1 &1552405812
 GameObject:
   m_ObjectHideFlags: 0
@@ -18855,6 +18959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &1649596949
 GameObject:
   m_ObjectHideFlags: 0
@@ -19333,6 +19438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1681678740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19717,6 +19823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1748711605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19844,6 +19951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1761333798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21331,6 +21439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &1980442448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21538,6 +21647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &2003819233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21670,6 +21780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1001 &2030691102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22059,6 +22170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
 --- !u!1 &2095276816
 GameObject:
   m_ObjectHideFlags: 0
@@ -22357,3 +22469,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrass: 1
   collected: 0
+  isRupee: 0
