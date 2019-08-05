@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8388da9a2ff00c4e8e7d988da553a20
+guid: 22898232222f2bb488c0ddc742fec191
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,8 +11,7 @@ TrueTypeFontImporter:
   fontName: Medieval Pixel
   fontNames:
   - Medieval Pixel
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 22898232222f2bb488c0ddc742fec191, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

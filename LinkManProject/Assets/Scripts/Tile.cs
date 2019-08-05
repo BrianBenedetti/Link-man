@@ -8,4 +8,5 @@ public class Tile : MonoBehaviour
 
     public bool isGrass;
     public bool collected;
+    public bool isRupee;
 }
