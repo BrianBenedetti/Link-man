@@ -16,6 +16,8 @@ public class Board : MonoBehaviour
     AudioSource deathSound;
     AudioSource winSound;
 
+    int scoreCounter;
+
     int uncollectedGrass;
 
     public int lives = 3;
@@ -29,6 +31,7 @@ public class Board : MonoBehaviour
         deathSound = sounds[0];
         winSound = sounds[1];
 
+        scoreCounter = 0;
 
         link = GameObject.FindGameObjectWithTag("Link");
 
@@ -63,14 +66,20 @@ public class Board : MonoBehaviour
         }
 
         uncollectedGrass = 0;
+        scoreCounter = 0;
 
         foreach (Tile o in grass)
         {
-            if(!(o.collected))
+            if (!(o.collected))
             {
                 uncollectedGrass++;
             }
+            else {
+                scoreCounter++;
+            }
         }
+
+        print("SCORE COUNTER: " + scoreCounter * 50);
 
         if (uncollectedGrass == 0)
         {

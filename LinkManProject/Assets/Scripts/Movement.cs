@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
 
         anim.SetBool("Death", false);
+        anim.SetBool("Idle", true);
 
         Node node = getNodePosition(transform.localPosition);
 
@@ -57,6 +58,7 @@ public class Movement : MonoBehaviour
         anim.SetBool("Down", false);
         anim.SetBool("Left", false);
         anim.SetBool("Right", false);
+        anim.SetBool("Idle", false);
     }
 
     public void Restart() {
@@ -72,6 +74,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Down", false);
             anim.SetBool("Left", false);
             anim.SetBool("Right", false);
+            anim.SetBool("Idle", false);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -80,6 +83,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Down", true);
             anim.SetBool("Left", false);
             anim.SetBool("Right", false);
+            anim.SetBool("Idle", false);
         }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
@@ -88,6 +92,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Down", false);
             anim.SetBool("Left", true);
             anim.SetBool("Right", false);
+            anim.SetBool("Idle", false);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -96,6 +101,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("Down", false);
             anim.SetBool("Right", false);
             anim.SetBool("Left", true);
+            anim.SetBool("Idle", false);
         }
 
         setDirection();
