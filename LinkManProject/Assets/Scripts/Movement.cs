@@ -22,7 +22,11 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        moveSpeed = 4.2f;
+
         anim = gameObject.GetComponent<Animator>();
+
+        anim.SetBool("Death", false);
 
         Node node = getNodePosition(transform.localPosition);
 
@@ -47,25 +51,16 @@ public class Movement : MonoBehaviour
      
     }
 
-    public void Restart() {
-        /*transform.position = startPos.transform.position;
-        currentNode = startPos;
-        inputDirection = Vector2.left;
-        orientation = Vector2.left;
-        nextDirection = Vector2.left;
-        changeDirection(inputDirection);
-        //ABOVE STUFF IS FOR RESETTING POSITION OF THE PLAYER
-
-
+    public void Death() {
         anim.SetBool("Death", true);
         anim.SetBool("Up", false);
         anim.SetBool("Down", false);
         anim.SetBool("Left", false);
         anim.SetBool("Right", false);
-        //ABOVE STUFF IS FOR SETTING PLAYER TO DEATH ANIMATION
-        */
+    }
 
-        print("____PROMPT TO RESTART SCENE/ENDGAME/LOSELIFE__");
+    public void Restart() {
+
     }
 
     // Update is called once per frame

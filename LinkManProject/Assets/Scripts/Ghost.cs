@@ -281,7 +281,7 @@ public class Ghost : MonoBehaviour
 
         if (chuchuRect.Overlaps(linkRect))
         {
-            GameObject.Find("GameBoard").transform.GetComponent<Board>().Restart();
+            GameObject.Find("GameBoard").transform.GetComponent<Board>().startDeath();
 
         }
     }
