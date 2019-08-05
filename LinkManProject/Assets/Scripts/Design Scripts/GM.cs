@@ -12,7 +12,6 @@ public class GM : MonoBehaviour
     public TextMesh scoreText;
     public TextMesh healthText;
     public bool paused = false;
-    public GameObject startBoard;
     public GameObject infoBoard;
     public GameObject controlsBoard;
     public GameObject healthLossParticles;
@@ -53,7 +52,6 @@ public class GM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartGame();
         PauseGame();
 
         if (Input.GetKeyDown(KeyCode.Z)) //stand in UI interactions
@@ -100,23 +98,6 @@ public class GM : MonoBehaviour
         }
     }
 
-    void StartGame ()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && quitMenu.activeInHierarchy == false)
-        {
-            startBoard.SetActive(false);
-            controlsBoard.SetActive(true);
-            Invoke("HideControlsBoard", 4f);
-        }
-    }
-
-    void HideControlsBoard()
-    {
-        controlsBoard.SetActive(false);
-        infoBoard.SetActive(true);
-        standInPlayer.SetActive(true);
-    }
-
     public void HealthLoss()
     {
         health--;
@@ -138,7 +119,7 @@ public class GM : MonoBehaviour
         {
             redHealthIcon.SetActive(false);
             gameOverText.SetActive(true);
-            Invoke("ReloadGame", 2f);
+            Invoke("LoadMenu", 2f);
         }
     }
 
@@ -206,6 +187,11 @@ public class GM : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
+    void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     void ActivateQuitMenu()
     {
         quitMenu.SetActive(true);
@@ -234,8 +220,7 @@ public class GM : MonoBehaviour
         //confirming quiting
         if (cursor.transform.position == yesText.transform.position && Input.GetKeyDown(KeyCode.Space))
         {
-            Application.Quit();
-            print("quit");
+            LoadMenu();
         }
     }
 }

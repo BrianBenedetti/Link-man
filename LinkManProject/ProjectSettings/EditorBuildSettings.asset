@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MamellosUIScene.unity
+    guid: 4bae86239117a614bb559678b1d70775
+  - enabled: 1
+    path: Assets/Scenes/SaatwiksTestScene.unity
+    guid: 43d32650249bfa34ab8d1b8e8767b946
   m_configObjects: {}

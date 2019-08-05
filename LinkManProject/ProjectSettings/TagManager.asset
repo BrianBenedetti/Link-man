@@ -7,6 +7,8 @@ TagManager:
   - Link
   - Game
   - Chuchu
+  - Start
+  - Quit
   layers:
   - Default
   - TransparentFX
